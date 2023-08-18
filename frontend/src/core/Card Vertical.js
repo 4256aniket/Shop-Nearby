@@ -57,13 +57,13 @@ const Card = ({
   };
 
   return (
-    <div className="flex flex-col min-w-[250px] bg-white border rounded-lg dark:bg-white dark:border-gray-300 dark:text-black shadow-none  hover:shadow-2xl">
+    <div className="flex flex-col min-w-[250px] max-w-[250px] bg-white border rounded-lg dark:bg-white dark:border-gray-300 dark:text-black shadow-none  hover:shadow-2xl">
       <div className="flex items-center justify-center h-[185px] mt-4">
         <Link to={`/products/${product._id}`}>
           <ImageHelper product={product} />
         </Link>
       </div>
-      <div className="mx-auto mt-4">
+      <div className="mx-auto mb-5">
         <h5 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-black">
           {product.name}
         </h5>
@@ -71,15 +71,15 @@ const Card = ({
 
       {/* <div className="px-8 pb-5 mt-auto"> */}
         {/* {getRedirect()} */}
-        <div className="flex items-center justify-between mt-3">
-          <span className="text-lg font-bold text-gray-900 dark:text-black">
+        {/* <div className="flex items-center justify-between mt-3"> */}
+          {/* <span className="text-lg font-bold text-gray-900 dark:text-black"> */}
             {/* ₹{product.price} */}
-          </span>
+          {/* </span> */}
           {/* {showAddToCart()} */}
           {/* {showRemoveFromCart()} */}
         {/* </div> */}
         
-      </div>
+      {/* </div> */}
     </div>
   );
 };
