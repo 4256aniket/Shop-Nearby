@@ -48,7 +48,7 @@ const Cart = () => {
     <Base>
       <div className="px-5 flex items-center justify-center lg:items-start flex-col lg:flex-row">
         <div className="flex-2 max-w-[800px]">
-            {products.length > 0 ? (
+            {Array.isArray(products) && products.length > 0 ? (
               loadAllProducts(products)
             ) : (
               <h3 className="text-black font-semibold text-lg">

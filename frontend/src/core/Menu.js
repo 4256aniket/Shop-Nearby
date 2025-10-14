@@ -73,7 +73,7 @@ const Menu = () => {
                   </div>
                 </Link>
               </li>
-              {isAuthenticated() && isAuthenticated().user.role === 0 && (
+              {isAuthenticated() && isAuthenticated().user && isAuthenticated().user.role === 0 && (
                 <li>
                   <Link
                     to="/user/profile"
@@ -84,7 +84,7 @@ const Menu = () => {
                   </Link>
                 </li>
               )}
-              {isAuthenticated() && isAuthenticated().user.role === 1 && (
+              {isAuthenticated() && isAuthenticated().user && isAuthenticated().user.role === 1 && (
                 <li>
                   <Link
                     to="/admin/dashboard"
@@ -125,7 +125,7 @@ const Menu = () => {
                     className="block py-2 pl-3 pr-4 mx-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white md:hover:text-[#75E6DA] hover:bg-gray-700 hover:text-white md:hover:bg-transparent hover:cursor-pointer"
                   >
                     <div className="flex flex-row items-center">
-                      {user.name}{" "}
+                      {user && user.name ? user.name : ""}{" "}
                       <img
                         className="h-10 w-auto"
                         src={imageSignOut}
@@ -211,7 +211,7 @@ const Menu = () => {
                 Cart
               </Link>
             </li>
-            {isAuthenticated() && isAuthenticated().user.role === 0 && (
+            {isAuthenticated() && isAuthenticated().user && isAuthenticated().user.role === 0 && (
               <li>
                 <Link
                   to="/user/dashboard"
@@ -221,7 +221,7 @@ const Menu = () => {
                 </Link>
               </li>
             )}
-            {isAuthenticated() && isAuthenticated().user.role === 1 && (
+            {isAuthenticated() && isAuthenticated().user && isAuthenticated().user.role === 1 && (
               <li>
                 <Link
                   to="/admin/dashboard"

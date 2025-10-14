@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -24,9 +24,11 @@
     "mongoose": "^7.2.1",
     "mongoose-double": "^0.0.1",
     "morgan": "^1.9.1",
-    "nodemon": "^1.19.4",
     "npm": "^6.13.0",
     "stripe": "^12.11.0",
     "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

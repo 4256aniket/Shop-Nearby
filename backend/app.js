@@ -13,6 +13,7 @@ const categoryRoutes = require("./routes/category");
 const productRoutes = require("./routes/product");
 const orderRoutes = require("./routes/order");
 const paymentRoutes = require("./routes/stripePayment");
+const User = require("./models/user");
 
 const app = express();
 
@@ -32,6 +33,9 @@ app.use(cors());
 
 // My routes
 app.use("/api", authRoutes);
+
+// Test DB connection by fetching one user and printing it
+
 app.use("/api", userRoutes);
 app.use("/api", categoryRoutes);
 app.use("/api", productRoutes);
